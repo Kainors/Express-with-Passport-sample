@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  if(isAuthenticated)
+    p Hello #{user.name}!
+    a(href="/logout") 登出
+  else
+    a(href="/login") 登入
